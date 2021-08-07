@@ -6,5 +6,5 @@ app = Flask(__name__)
 
 #setting up configuration
 app.config.from_object(DevConfig)
-app.config.from_pyfile('config.py')
+app.config.from_pyfile('../instance/config.py')
 from app import views
