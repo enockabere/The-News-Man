@@ -1,3 +1,4 @@
+{% import 'macros.html' as macro %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,14 +12,13 @@
         <title>Welcome to The News Man</title>
     {% endif %}
 </head>
+
 <body>
     
     <div>
         <h1>{{context.heading}}</h1>
         <ul>
-            {% for sources in sources %}
-            <li>{{sources.name}}</li>
-            {% endfor %}
+            {{ macro.displayNewsSources(sources)}}
         </ul>
     </div>
 </body>
