@@ -1,6 +1,6 @@
 from flask import render_template
 from app import app
-from .request import get_sources
+from .request import get_sources, get_articles
 
 # Views
 @app.route('/')
@@ -21,4 +21,6 @@ def articles(articles_id):
     '''
     it shows the news articles from the selected sources
     '''
-    return render_template('articles.html',id=articles_id)
+    articles = get_articles('omosh')
+    print(articles)
+    return render_template('articles.html',id=articles_id, omosh=articles)
