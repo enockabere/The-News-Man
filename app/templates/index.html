@@ -12,6 +12,14 @@
     {% endif %}
 </head>
 <body>
-    <h1>{{context.heading}}</h1>
+    
+    <div>
+        <h1>{{context.heading}}</h1>
+        <ul>
+            {% for sources in sources %}
+            <li>{{sources.name}}</li>
+            {% endfor %}
+        </ul>
+    </div>
 </body>
 </html>
