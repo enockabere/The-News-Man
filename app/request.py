@@ -27,3 +27,5 @@ def get_sources():
             sources_result_list = get_sources_response['sources']
             sources_result = process_results(sources_result_list)
     return sources_result
+def process_results(sources_list):
+    ''''''
