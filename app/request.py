@@ -86,5 +86,17 @@ def art_results(article_list):
                 articles_object = Articles(author,title,description,url,urlToImage,publishedAt,content)
                 articles_results.append(articles_object)
         return articles_results
+def search_article(article_name):
+    search_article_url = 'https://newsapi.org/v2/everything?q={}&sortBy=popularity&apiKey={}'.format(article_name,api_key)
+    with urllib.request.urlopen(search_article_url) as url:
+        search_article_data = url.read()
+        search_article_response = json.loads(search_article_data)
+        
+        search_article_results = None
+        
+        if search_article_response ['articles']:
+            search_article_list = search_article_response['articles']
+            search_article_results = art_results(search_article_list)
+    return search_article_results
     
         

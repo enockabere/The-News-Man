@@ -1,5 +1,5 @@
 body{
-    background-color: cadetblue;
+    background-color: #282c2f;
 }
 .navbar{
     background-color:  #DCE1E3;
@@ -42,4 +42,118 @@ body{
 #gits:hover{
     border-color: #3C1874;
     background-color: #3C1874;
+}
+/* sources section */
+.sources{
+    background:linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ), url(../images/2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#sources{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 20px;
+}
+
+.section-header{
+    font-size: 16px;
+	text-align: left;
+	font-family: 'Noto Sans SC', sans-serif;
+	color: #ffde22;
+	font-weight: 700;
+	text-decoration: none;
+}
+@media (max-width: 768px) {
+    .carousel-inner .carousel-item > div {
+        display: none;
+    }
+    .carousel-inner .carousel-item > div:first-child {
+        display: block;
+    }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+/* display 3 */
+@media (min-width: 768px) {
+    
+    .carousel-inner .carousel-item-right.active,
+    .carousel-inner .carousel-item-next {
+      transform: translateX(33.333%);
+    }
+    
+    .carousel-inner .carousel-item-left.active, 
+    .carousel-inner .carousel-item-prev {
+      transform: translateX(-33.333%);
+    }
+}
+
+.carousel-inner .carousel-item-right,
+.carousel-inner .carousel-item-left{ 
+  transform: translateX(0);
+}
+.carousel-control-prev-icon{
+    background-color: black;
+    color: red;
+}
+.icos{
+    color: #ffde22;
+    padding-top: 20px;
+}
+#sCard{
+    background: transparent;
+    box-shadow: 0 4px 5px 0 #626768;
+    transition: 0.3s;
+	border-radius: 10px;
+    border: 2px solid white;
+
+}
+#sCard:hover{
+    background: transparent;
+    box-shadow: none;
+    border-radius: 10px;
+    border: 2px solid #3C1874;
+}
+.card-title{
+    font-family: 'Noto Serif', serif;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 400;
+	color: #DE354C;
+    text-align: left;
+}
+.card-text{
+    color: white;
+	padding-bottom: 10px;
+    text-align:left;
+    font-size: 12px;
+}
+#vw{
+    background-color: #DCE1E3;
+    border-color: #3C1874;
+    color: #DE354C;
+}
+#vw:hover{
+    background-color: #3C1874;
+    border-color: #3C1874;
+    color:#DCE1E3;
+}
+.cat{
+    color: #DE354C;
+}
+#arrow3 {
+	border-radius: 50%;
+	margin-left: 80%;
+	color: red;
+	background-color: white;
+	
 }

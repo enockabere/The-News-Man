@@ -1,5 +1,23 @@
 {% macro displayNewsSources(sources_list) %}
     {% for sources in sources_list %}
-        <li>{{sources.name}}</li>
+        <div class="carousel-item">
+            <div class="col-md-3">
+                <div class="card h-100" id="sCard">
+                    <div class="icos">
+                        <i id= "Three" class="far fa-newspaper fa-2x"></i>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">{{sources.name}}</h5>
+                      <p class="card-text">{{sources.description}}</p>
+                      <p class="card-text"><small class="text-muted">News category: <span class="cat">{{sources.category}}</span> </small></p>
+                      <a href="{{sources.url}}">
+                        <button id="vw" class="btn btn-primary" type="button">
+                            View Source...
+                          </button>
+                      </a>
+                    </div>
+                  </div>
+            </div>
+        </div>
     {% endfor %}
 {% endmacro %}
