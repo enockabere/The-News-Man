@@ -7,4 +7,11 @@
             {{ macro.displayNewsSources(sources)}}
         </ul>
     </div>
+    <div>
+            <ul>
+                {% for articles in omosh %}
+                    <a href="/articles/{{articles.id}}">{{ articles.author}}</a>
+                {% endfor %}
+            </ul>
+         </div>
 {% endblock %}

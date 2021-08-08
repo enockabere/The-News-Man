@@ -1,6 +1,3 @@
-from app.models.articles_test import Articles
-from app.views import articles
-from os import name
 from app import app
 import urllib.request,json
 from . models import source,articles

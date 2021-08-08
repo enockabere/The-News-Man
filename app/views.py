@@ -15,7 +15,9 @@ def index():
     }
     sources = get_sources()
     print(sources)
-    return render_template('index.html', context=data,sources= sources)
+    articles = get_articles('omosh')
+    print(articles)
+    return render_template('index.html', context=data,sources= sources,omosh=articles)
 @app.route('/articles/<int:articles_id>')
 def articles(articles_id):
     '''
