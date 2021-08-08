@@ -1,3 +1,45 @@
 body{
     background-color: cadetblue;
 }
+.navbar{
+    background-color:  #DCE1E3;
+}
+.navbar-brand{
+    color: white;
+    font-family: 'Acme', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+}
+.br {
+    color: #DE354C;
+    padding-left: 10px;
+  }
+  .navbar-toggler{
+    background-color:#DE354C;
+    color: white;
+}
+#actives{
+    color: black;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+}
+#actives:hover{
+    color: #DE354C;
+}
+.con{
+    color:#DE354C;
+    text-align: right;
+}
+#active{
+    color: #3C1874;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+}
+#gits{
+    border-color: #3C1874;
+    color: #DE354C;
+}
+#gits:hover{
+    border-color: #3C1874;
+    background-color: #3C1874;
+}
