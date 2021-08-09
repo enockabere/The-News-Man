@@ -16,7 +16,7 @@
           <div class="col-md-6 mr-auto">
             <div class="card h-100" id="gallery">
               <div class="myImage">
-                <a target="_blank" href="{{articles.url}}">
+                <a target="_blank" href="/articles/{{articles.title}}">
                   {% if articles.urlToImage %}
                     <img src="{{articles.urlToImage}}" class="img-hover-zoom" alt="news image">
                   {% else %}
@@ -38,6 +38,25 @@
             </div>
           </div>
           {% endfor %}
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="ads">
+          <a href="" target="blank">
+            <img src="../static/images/sidebar_banner.png" alt="Avatar" class="image" style="width:100%">
+          </a>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="socials1">
+              <i class="fab fa-facebook"><Strong>1000 Fans</Strong></i>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="socials2">
+              <i class="fab fa-twitter"><Strong>1000 Fans</Strong></i>
+            </div>
+          </div>
         </div>
       </div>
     </div>

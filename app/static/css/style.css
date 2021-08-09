@@ -220,3 +220,24 @@ body{
 	text-decoration: none;
     padding-bottom: 20px;
 }
+.ads{
+    position:relative;
+    width: 100%;
+}
+.socials1{
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px solid white;
+    color: #4267B2;
+}
+.socials1:hover{
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px solid #DE354C;
+    color: #DE354C;
+}
+.socials2{
+    margin-top: 20px;
+    padding: 10px;
+    color: #00acee;
+}

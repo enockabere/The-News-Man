@@ -1,6 +1,6 @@
 from flask import render_template, request, redirect,url_for
 from app import app
-from .request import get_sources, get_articles, search_article
+from .request import get_sources, get_articles, search_article,get_art
 
 # Views
 @app.route('/')
@@ -22,14 +22,13 @@ def index():
         return redirect(url_for('search',article_name=search_article))
     else:
         return render_template('index.html', context=data,sources= sources,omosh=articles)
-@app.route('/articles/<int:articles_id>')
-def articles(articles_id):
+@app.route('/articles/<string:title>')
+def articles(title):
     '''
     it shows the news articles from the selected sources
     '''
-    articles = get_articles('omosh')
-    print(articles)
-    return render_template('articles.html',id=articles_id, omosh=articles)
+    articles = get_art(title).replace(" ","-").lowercase()
+    return render_template('articles.html',articles=articles)
 @app.route('/search/<article_name>')
 def search(article_name):
     '''

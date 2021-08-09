@@ -1,20 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h3> Popular Articles</h3>
-         
-         <div>
-            <ul>
-                {% for articles in omosh %}
-                <img src="{{ articles.urlToImage}}" alt="">
-                {% endfor %}
-            </ul>
-         </div>
-</body>
-</html>
+{% extends 'base.html'%}
+<!-- Content block -->
+{% block content %}
+<div class="container">
+
+    <!-- Poster background -->
+    <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 posterPath" style="background: url({{articles.urlToImage}}) no-repeat center center">
+        </div>
+
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 movie-details">
+            <h3>{{ articles.author }}</h3>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
