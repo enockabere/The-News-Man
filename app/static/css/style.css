@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+  }
 body{
     background-color: #282c2f;
 }
@@ -156,4 +159,64 @@ body{
 	color: red;
 	background-color: white;
 	
+}
+#gallery {
+    background:transparent;
+    transition: 00.3s;
+    margin-bottom: 10px;
+    border: none;
+    overflow: hidden;
+    position: relative;
+  }
+  
+/* .myImage:hover {
+    border: 1px solid #777;
+  } */
+.myImage{
+    /* border: 1px solid #ccc; */
+    height: 200px;
+}
+.img-hover-zoom {
+    width: 100%;
+    height: auto;
+    transition: all 0.3s;
+    height: 100%;
+    display: block;
+    transform: scale(1);
+  }
+#artsp{
+    padding: 15px;
+    text-align: center;
+    color: #3C1874;
+}
+  
+/* [3] Finally, transforming the image when container gets hovered */
+.img-hover-zoom:hover{
+    transform: scale(1.1);
+  }
+#arts h5{
+    text-align:left;
+    color: black;
+    font-family: 'Acme', sans-serif;
+    text-transform:capitalize;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.account{
+      float: left;
+  }
+  .myArt{
+      background-image: linear-gradient(to right top, #eafaf1, #ebf9f3, #edf9f5, #eff8f6, #f1f7f6, #f1f7f6, #f1f6f6, #f1f6f6, #eff6f6, #ecf6f5, #eaf6f4, #e8f6f3);
+      padding-top: 30px;
+      padding-bottom: 30px;
+  }
+  .section-header1{
+    font-size: 16px;
+	text-align: left;
+	font-family: 'Noto Sans SC', sans-serif;
+	color: #3C1874;
+	font-weight: 700;
+	text-decoration: none;
+    padding-bottom: 20px;
 }
