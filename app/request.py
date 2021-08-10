@@ -1,6 +1,7 @@
 import urllib.request
 import json
-from .models import NewsSource, Articles
+from .models import NewsSource
+from .models import Articles
 
 
 #Fetch API key
