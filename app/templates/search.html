@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
+{% block content %}
+    <div>
+
+        <h3> Popular Articles</h3>
+         
+         <div>
+            <ul>
+                {% for articles in searched_articles %}
+                <img src="{{ articles.urlToImage}}" alt="">
+                {% endfor %}
+            </ul>
+         </div>
+
+    </div>
+{% endblock %}
