@@ -1,8 +1,5 @@
 import urllib.request,json
-from .models import News_Source, Articles
-
-# News_source = source.News_Source
-# Articles = articles.Articles
+from .models import NewsSource, Articles
 
 
 #Fetch API key
@@ -50,7 +47,7 @@ def process_results(sources_list):
         language = source_item.get('language')
         country = source_item.get('country')
         if url:
-            sources_object = News_Source(id,name,description,url,category,language,country)
+            sources_object = NewsSource(id,name,description,url,category,language,country)
             sources_result.append(sources_object)
     return sources_result
 #Article Functions

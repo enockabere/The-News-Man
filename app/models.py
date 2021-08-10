@@ -1,4 +1,4 @@
-class News_Source:
+class NewsSource:
     '''
     class that defines news objects
     '''
@@ -10,8 +10,7 @@ class News_Source:
         self.category = category
         self.language = language
         self.country = country
-        
-        
+               
 class Articles:
     '''
     class that defines articles objects

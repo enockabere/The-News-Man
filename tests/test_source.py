@@ -1,7 +1,7 @@
 import unittest
-from app.models import News_Source
+from app.models import NewsSource
 
-class news_sourceTest(unittest.TestCase):
+class NewsSourceTest(unittest.TestCase):
     '''
     Test Class to test the behavior of the News_source Class
     '''
@@ -9,6 +9,6 @@ class news_sourceTest(unittest.TestCase):
         '''
         setup method that runs before every test
         '''
-        self.new_source = News_Source("abc-news","ABC News","Your trusted source for breaking news, analysis, exclusive interviews, headlines, and videos at ABCNews.com.","https://abcnews.go.com","general","en","au")
+        self.new_source = NewsSource("abc-news","ABC News","Your trusted source for breaking news, analysis, exclusive interviews, headlines, and videos at ABCNews.com.","https://abcnews.go.com","general","en","au")
     def test_instance(self):
-        self.assertTrue(isinstance(self.new_source,News_Source))
+        self.assertTrue(isinstance(self.new_source,NewsSource))

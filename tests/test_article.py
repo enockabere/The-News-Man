@@ -1,7 +1,7 @@
 import unittest
 from app.models import Articles
 
-class news_sourceTest(unittest.TestCase):
+class NewsSourceTest(unittest.TestCase):
     '''
     Test Class to test the behavior of the News_source Class
     '''
