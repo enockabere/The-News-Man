@@ -14,7 +14,7 @@ def index():
         "heading": "News Man", 
     }
     sources = get_sources()
-    print(sources)
+    
     articles = get_articles('omosh')
     search_article = request.args.get('article_query')
     if search_article:

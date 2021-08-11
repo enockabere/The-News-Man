@@ -14,7 +14,7 @@ class prodConfig(Config):
     Args:
         Config:It inherits from the parent configuration class with the general configurations
     '''
-    pass
+    NEWS_API_KEY = os.environ.get('NEWS_API_KEY')
 class DevConfig(Config):
     '''
     Development Configuration Child Class
