@@ -1,6 +1,9 @@
 * {
     box-sizing: border-box;
   }
+html{
+    scroll-behavior: smooth;
+}
 body{
     background-color: #282c2f;
 }
@@ -9,13 +12,13 @@ body{
 }
 .navbar-brand{
     color: white;
-    font-family: 'Acme', sans-serif;
+    font-family: 'Style Script', cursive;
     font-size: 30px;
     font-weight: 600;
 }
+
 .br {
     color: #DE354C;
-    padding-left: 10px;
   }
   .navbar-toggler{
     background-color:#DE354C;
@@ -46,6 +49,64 @@ body{
     border-color: #3C1874;
     background-color: #3C1874;
 }
+/* Hero Section */
+.hero{
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    )
+}
+#typ{
+    font-size: 100px;
+    font-family: 'Cinzel', serif;
+    color: #feb300;
+}
+.richs{
+    font-size: 18px;
+    color: white;
+    font-family: 'Recursive', sans-serif;
+}
+.scroll-down {
+    position: absolute;
+    -webkit-animation: bounce 2s infinite 2s;
+    animation: bounce 2s infinite 2s;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+  }
+  @keyframes bounce {
+    0%,
+    100%,
+    20%,
+    50%,
+    80% {
+      -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+      transform: translateY(0);
+    }
+    40% {
+      -webkit-transform: translateY(-10px);
+      -ms-transform: translateY(-10px);
+      transform: translateY(-10px);
+    }
+    60% {
+      -webkit-transform: translateY(-5px);
+      -z-index:1;ms-transform: translateY(-5px);
+      transform: translateY(-5px);
+
+    }
+  }
+  .the{
+      color: black;
+      font-family: 'Style Script', cursive;
+      font-size: 30px;
+  }
+  .man{
+      font-size: 30px;
+      color:#DE354C;
+      font-family: 'Style Script', cursive;
+  }
+
 /* sources section */
 .sources{
     background:linear-gradient(
