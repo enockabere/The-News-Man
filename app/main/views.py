@@ -15,7 +15,7 @@ def index():
     }
     sources = get_sources()
     
-    articles = get_articles('omosh')
+    articles = get_articles('Uhuru')
     search_article = request.args.get('article_query')
     if search_article:
         return redirect(url_for('search',article_name=search_article))

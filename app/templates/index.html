@@ -1,59 +1,67 @@
 {% extends 'base.html' %}
 {% import 'macros.html' as macro %}
 {% block article %}
-<section class="myArt">
+<section class="article">
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
-        <h3 class="section-header1">News Articles <i class="fas fa-level-down-alt"></i></h3>
-        <hr>
-      </div>
-    </div>
-    <div class="row" id="roat">
-      <div class="col-md-9 mr-auto">
-        <div class="row">
-          {% for articles in omosh %}
-          <div class="col-md-6 mr-auto">
-            <div class="card h-100" id="gallery">
-              <div class="myImage">
-                <a target="_blank" href="/articles/{{articles.title}}">
-                  {% if articles.urlToImage %}
-                    <img src="{{articles.urlToImage}}" class="img-hover-zoom" alt="news image">
-                  {% else %}
-                  <img src="../static/images/oops-1432954_640.png" class="img-hover-zoom" alt="news image">
-                  {% endif %}
-                </a>
-              </div>
-              <div class="card-body">
-                <div class="card-title" id="arts">
-                  <h5>{{articles.description}}</h5>
-                </div>
-                <div class="card-text" id="artsp">
-                  <span class="account"><i class="fas fa-user-circle"></i> <small
-                      class="text-muted">{{articles.author}}</small></span>
-                  <span class="publish"><i class="far fa-clock"></i> <small
-                      class="text-muted">{{articles.publishedAt}}</small></span>
-                </div>
+      {% for articles in omosh %}
+      <div class="col-md-6">
+        <div class="card card-nav-tabs">
+          <div class="card-header card-header-primary">
+            <div class="nav-tabs-navigation">
+              <div class="nav-tabs-wrapper">
+                <ul class="nav nav-tabs" data-tabs="tabs">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#profile" data-toggle="tab">
+                      <i class="material-icons">rate_review</i>
+                      {{articles.author}}
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#messages" data-toggle="tab">
+                      <i class="material-icons">description</i>
+                      More...
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{articles.url}}" target="blank">
+                      <i class="material-icons">link</i>
+                      View Source
+                    </a>
+
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
-          {% endfor %}
+          <div class="card-body ">
+            <div class="tab-content text-center">
+              <div class="tab-pane active" id="profile">
+                <div class="myImage">
+                  <img src="{{articles.urlToImage}}" class="img-hover-zoom" alt="news image">
+                </div>
+                <div class="heads">
+                  <p>
+                    {{articles.description}}
+                  </p>
+                </div>
+                <div id="textbox" style="clear: both;">
+                  <p class="alignleft"><i class="far fa-hand-point-right"></i><small class="text-muted">
+                      {{articles.title}}</small></p>
+                  <p class="alignright"><i class="far fa-clock"></i><small class="text-muted">
+                      {{articles.publishedAt}}</small></p>
+                </div>
+              </div>
+              <div class="tab-pane" id="messages">
+                <p>
+                  {{articles.content}}
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="col-md-3">
-        <div class="ads">
-          <a href="" target="blank">
-            <img src="../static/images/sidebar_banner.png" alt="Avatar" class="image" style="width:100%">
-          </a>
-        </div>
-        <div class="row">
-         <div class="col-md-6">
-           <div class="social">
-            <i class="fab fa-twitter"></i>
-           </div>
-         </div>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>

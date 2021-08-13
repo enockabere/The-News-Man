@@ -221,14 +221,7 @@ body{
 	background-color: white;
 	
 }
-#gallery {
-    background:transparent;
-    transition: 00.3s;
-    margin-bottom: 10px;
-    border: none;
-    overflow: hidden;
-    position: relative;
-  }
+
   
 /* .myImage:hover {
     border: 1px solid #777;
@@ -245,46 +238,130 @@ body{
     display: block;
     transform: scale(1);
   }
-#artsp{
-    padding: 15px;
-    text-align: center;
-    color: #3C1874;
-}
+
   
 /* [3] Finally, transforming the image when container gets hovered */
 .img-hover-zoom:hover{
     transform: scale(1.1);
   }
-#arts h5{
-    text-align:left;
-    color: black;
-    font-family: 'Acme', sans-serif;
-    text-transform:capitalize;
-    font-size: 15px;
-    font-weight: 700;
+
+/* article */
+.article{
+    padding-top: 40px;
+}
+div.card {
+    border: 0;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    border-radius: 6px;
+    color: rgba(0,0,0,.87);
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
 }
 
-.account{
-      float: left;
-  }
-  .myArt{
-      background-image: linear-gradient(to right top, #eafaf1, #ebf9f3, #edf9f5, #eff8f6, #f1f7f6, #f1f7f6, #f1f6f6, #f1f6f6, #eff6f6, #ecf6f5, #eaf6f4, #e8f6f3);
-      padding-top: 30px;
-      padding-bottom: 30px;
-  }
-  .section-header1{
-    font-size: 16px;
-	text-align: left;
-	font-family: 'Noto Sans SC', sans-serif;
-	color: #3C1874;
-	font-weight: 700;
-	text-decoration: none;
-    padding-bottom: 20px;
+div.card.card-plain {
+    background: transparent;
+    box-shadow: none;
 }
-.ads{
-    position:relative;
-    width: 100%;
+div.card .card-header {
+    border-radius: 3px;
+    padding: 1rem 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: -30px;
+    border: 0;
+    background: linear-gradient(60deg,#eee,#bdbdbd);
 }
-.social{
-    background-color: red;
+
+.card-plain .card-header:not(.card-avatar) {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.div.card .card-body{
+    padding: 15px 30px;
+}
+
+div.card .card-header-primary {
+    background: linear-gradient(60deg,#ab47bc,#7b1fa2);
+    box-shadow: 0 5px 20px 0 rgba(0,0,0,.2), 0 13px 24px -11px rgba(156,39,176,.6);
+}
+
+div.card .card-header-danger {
+    background: linear-gradient(60deg,#ef5350,#d32f2f);
+    box-shadow: 0 5px 20px 0 rgba(0,0,0,.2), 0 13px 24px -11px rgba(244,67,54,.6);
+}
+
+
+.card-nav-tabs .card-header {
+    margin-top: -30px!important;
+}
+
+.card .card-header .nav-tabs {
+    padding: 0;
+}
+
+.nav-tabs {
+    border: 0;
+    border-radius: 3px;
+    padding: 0 15px;
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.nav-tabs .nav-item {
+    margin-bottom: -1px;
+}
+
+.nav-tabs .nav-item .nav-link.active {
+    background-color: hsla(0,0%,100%,.2);
+    transition: background-color .3s .2s;
+}
+
+.nav-tabs .nav-item .nav-link{
+    border: 0!important;
+    color: #fff!important;
+    font-weight: 500;
+}
+
+.nav-tabs .nav-item .nav-link {
+    color: #fff;
+    border: 0;
+    margin: 0;
+    border-radius: 3px;
+    line-height: 24px;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 10px 15px;
+    background-color: transparent;
+    transition: background-color .3s 0s;
+}
+
+.nav-link{
+    display: block;
+}
+
+.nav-tabs .nav-item .material-icons {
+    margin: -1px 5px 0 0;
+    vertical-align: middle;
+}
+
+.nav .nav-item {
+    position: relative;
+}
+.alignleft {
+	float: left;
+}
+.alignright {
+	float: right;
+}
+.heads{
+    padding-top: 10px;
 }

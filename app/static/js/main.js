@@ -37,3 +37,8 @@ $(function () {
     typeSpeed:200
   });
 });
+$(document).ready(function() {
+  $('body').bootstrapMaterialDesign();
+  
+  
+});
