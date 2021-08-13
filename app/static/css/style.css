@@ -103,6 +103,64 @@ body{
   #myBtn:hover {
     background-color: #555;
   }
+  #scrolls{
+      background: white;
+      margin-top: 30px;
+      border-radius: 5px;
+      border: 1px solid #BFBFBF;
+      height:50vh;
+  }
+  #scroller{
+      background:#DCC7AA;
+      padding-bottom: 30px;
+      margin-top: 20px;
+      border-radius: 2px;
+      box-shadow: 2px 2px #feb300;
+  }
+  .start{
+      padding: 10px;
+  }
+  .start h4{
+    font-size: 15px;
+    color: black;
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+}
+.start p{
+    font-size: 12px;
+    color: rgb(163, 159, 159);
+    font-family: 'Roboto Slab', serif;
+}
+  .info{
+      padding:10px;
+      border: 2px solid black;
+      display: flex;
+    overflow: hidden;
+    margin: 10px;
+    background-color:#e1b382;
+    border-radius:10px;
+  }
+  .info h6{
+    font-size: 13px;
+    color: red;
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    text-decoration: none;
+    
+}
+.info p{
+    font-size: 11px;
+    color: rgb(248, 244, 244);
+    font-family: 'Roboto Slab', serif;
+    text-decoration: none;
+}
+.info h6:hover{
+    text-decoration: none;
+    
+}
+.info p:hover{
+    text-decoration: none;
+}
 /* Hero Section */
 .hero{
     background:
@@ -162,7 +220,9 @@ body{
   }
 
 /* sources section */
-.sources{
+
+.source{
+    height:70vh;
     background:linear-gradient(
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
@@ -171,90 +231,10 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-}
-#sources{
-    padding-top: 30px;
     padding-bottom: 30px;
-    margin-top: 20px;
 }
 
-.section-header{
-    font-size: 16px;
-	text-align: left;
-	font-family: 'Noto Sans SC', sans-serif;
-	color: #ffde22;
-	font-weight: 700;
-	text-decoration: none;
-}
-@media (max-width: 768px) {
-    .carousel-inner .carousel-item > div {
-        display: none;
-    }
-    .carousel-inner .carousel-item > div:first-child {
-        display: block;
-    }
-}
 
-.carousel-inner .carousel-item.active,
-.carousel-inner .carousel-item-next,
-.carousel-inner .carousel-item-prev {
-    display: flex;
-}
-
-/* display 3 */
-@media (min-width: 768px) {
-    
-    .carousel-inner .carousel-item-right.active,
-    .carousel-inner .carousel-item-next {
-      transform: translateX(33.333%);
-    }
-    
-    .carousel-inner .carousel-item-left.active, 
-    .carousel-inner .carousel-item-prev {
-      transform: translateX(-33.333%);
-    }
-}
-
-.carousel-inner .carousel-item-right,
-.carousel-inner .carousel-item-left{ 
-  transform: translateX(0);
-}
-.carousel-control-prev-icon{
-    background-color: black;
-    color: red;
-}
-.icos{
-    color: #ffde22;
-    padding-top: 20px;
-}
-#sCard{
-    background: transparent;
-    box-shadow: 0 4px 5px 0 #626768;
-    transition: 0.3s;
-	border-radius: 10px;
-    border: 2px solid white;
-
-}
-#sCard:hover{
-    background: transparent;
-    box-shadow: none;
-    border-radius: 10px;
-    border: 2px solid #3C1874;
-}
-.card-title{
-    font-family: 'Noto Serif', serif;
-    text-transform: uppercase;
-    font-size: 15px;
-    font-weight: 400;
-	color: #DE354C;
-    text-align: left;
-}
-.card-text{
-    color: white;
-	padding-bottom: 10px;
-    text-align:left;
-    font-size: 12px;
-}
 #vw{
     background-color: #DCE1E3;
     border-color: #3C1874;
@@ -302,6 +282,7 @@ body{
 /* article */
 .article{
     padding-top: 40px;
+    padding-bottom:30px;
 }
 div.card {
     border: 0;

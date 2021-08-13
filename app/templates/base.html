@@ -23,6 +23,9 @@
     {% endif %}
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Merriweather+Sans:ital,wght@1,300&family=Recursive&family=Style+Script&family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
 </head>
 
@@ -42,6 +45,11 @@
 
     {% block article %}
     {% endblock %}
+    
+    {% block source %}
+    {% include 'sources.html' %}
+    {% endblock %}
+
     {% block sources %}
     {% endblock %}
     

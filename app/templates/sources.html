@@ -1,0 +1,18 @@
+{% import 'macros.html' as macro %}
+{% block source %}
+<section class="source">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3" id="scroller">
+               <div class="overflow-auto" id="scrolls">
+                   <div class="start">
+                    <h4>Top News Sources</h4>
+                    <p><strong><span id="disp">40 </span> categories</strong></p>
+                   </div>
+                   {{ macro.displayNewsSources(sources)}}
+               </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
