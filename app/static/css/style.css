@@ -23,15 +23,26 @@ body{
     text-align: left;
     background: #ab47bc;
 }
+#area{
+    display: flex;
+    overflow: hidden;
+}
 .blockquote{
-    font-family: 'Cinzel', serif;
     font-size: 17px;
     font-weight: 100;
 }
 .bran{
     color: #ffbe00;
 }
+#mybut{
+    background-color: transparent;
+    color: #DE354C;
+}
 
+#mybut:hover{
+    border-color: #3C1874;
+    background-color: #3C1874;
+}
 .br {
     color: white;
   }

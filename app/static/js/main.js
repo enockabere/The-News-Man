@@ -42,3 +42,11 @@ $(document).ready(function() {
   
   
 });
+var $ps = $("#wraps").children("#area");
+$ps.slice(4).hide(); // hide all p-tags after the first one
+// add the read more after the first element
+$ps.eq(3).after($('<button class="btn btn-success" id="mybut" type="button">Load More <i class="fas fa-chevron-circle-down"></i></button>').click(function(){
+    // if the read more link is clicked, remove the read more link and show all p-tags
+    $(this).remove();
+    $ps.show();
+})); 
