@@ -11,7 +11,7 @@ def index():
     '''
     data = {
         "title":"The News Man",
-        "heading": "News Man", 
+        "heading": "NewsMan", 
     }
     sources = get_sources()
     

@@ -5,39 +5,50 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    background-color: #282c2f;
+    background-color: #102950;
 }
 .navbar{
-    background-color:  #DCE1E3;
+    background-color:  #1c3459;
 }
 .navbar-brand{
-    color: white;
-    font-family: 'Style Script', cursive;
+    color: #ffbe00;
     font-size: 30px;
     font-weight: 600;
 }
+#top{
+    background-color: whitesmoke;
+}
+#top2{
+    color: white;
+    text-align: left;
+    background: #ab47bc;
+}
+.blockquote{
+    font-family: 'Cinzel', serif;
+    font-size: 17px;
+    font-weight: 100;
+}
+.bran{
+    color: #ffbe00;
+}
 
 .br {
-    color: #DE354C;
+    color: white;
   }
   .navbar-toggler{
-    background-color:#DE354C;
+    background-color:white;
     color: white;
 }
 #actives{
-    color: black;
+    color: #A3BCB6;
     font-family: 'Oswald', sans-serif;
     font-weight: 400;
 }
 #actives:hover{
-    color: #DE354C;
-}
-.con{
-    color:#DE354C;
-    text-align: right;
+    color:#097bed;
 }
 #active{
-    color: #3C1874;
+    color: #097bed;
     font-family: 'Oswald', sans-serif;
     font-weight: 400;
 }
