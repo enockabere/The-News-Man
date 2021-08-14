@@ -1,7 +1,6 @@
 import urllib.request
 import json
 
-from requests.exceptions import HTTPError
 from .models import NewsSource
 from .models import Articles
 from  requests import get
