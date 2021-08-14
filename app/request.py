@@ -3,7 +3,7 @@ import json
 
 from .models import NewsSource
 from .models import Articles
-from  requests import get
+# from  requests import get
 
 
 #Fetch API key
@@ -60,20 +60,20 @@ def get_articles(category):
     Function that gets the json response to our url request
     '''
     get_articles_url = article_url.format(category,api_key)
-    response = get(get_articles_url)
-    if response.status_code != 200:
-        raise HTTPError("Server did not respond")
-    python_ok_data = json.loads(response.text)
-    articles = python_ok_data.get('articles')
-    # with urllib.request.urlopen(get_articles_url) as url:
-    #     get_articles_data = url.read()
-    #     get_articles_response = json.loads(get_articles_data)
+    # response = get(get_articles_url)
+    # if response.status_code != 200:
+    #     raise HTTPError("Server did not respond")
+    # python_ok_data = json.loads(response.text)
+    # articles = python_ok_data.get('articles')
+    with urllib.request.urlopen(get_articles_url) as url:
+        get_articles_data = url.read()
+        get_articles_response = json.loads(get_articles_data)
         
-    #     articles_results = None
-    #     if get_articles_response ['articles']:
-    #         articles_results_list = get_articles_response['articles']
-    #         articles_results = art_results (articles_results_list)
-    return articles
+        articles_results = None
+        if get_articles_response ['articles']:
+            articles_results_list = get_articles_response['articles']
+            articles_results = art_results (articles_results_list)
+    return articles_results
 def art_results(article_list):
         '''
         Function that processes the news articles result and transform them to a list of objects
