@@ -1,40 +1,27 @@
 from flask import render_template, request, redirect,url_for
 from . import main
-from ..request import get_sources, get_articles, search_article,get_art
+from ..request import get_sources, get_articles
 
 # Views
-@main.route('/')
+@main.route('/',methods=[ 'POST','GET'])
 def index():
 
     '''
     View root page function that returns the index page and its data
     '''
+    raw_data = ""
+    if request.method == 'POST':
+        query_str = request.form.get("query")
+        articles = get_articles(query_str)
+        
+    if not (raw_data):
+       articles = get_articles('Uhuru') 
+    clean_data =articles
     data = {
         "title":"The News Man",
         "heading": "NewsMan", 
     }
     sources = get_sources()
     
-    articles = get_articles('Uhuru')
-    search_article = request.args.get('article_query')
-    if search_article:
-        return redirect(url_for('search',article_name=search_article))
-    else:
-        return render_template('index.html', context=data,sources= sources,omosh=articles)
-@main.route('/articles/<string:title>')
-def articles(title):
-    '''
-    it shows the news articles from the selected sources
-    '''
-    articles = get_art(title).replace(" ","-").lowercase()
-    return render_template('articles.html',articles=articles)
-@main.route('/search/<article_name>')
-def search(article_name):
-    '''
-    View function to display the search results
-    '''
-    article_name_list = article_name.split(" ")
-    article_name_format = "+".join(article_name_list)
-    searched_articles = search_article(article_name_format)
-    title = f'search results for {article_name}'
-    return render_template('search.html',articles = searched_articles)
+    
+    return render_template('index.html', context=data,sources= sources, clean_data=clean_data)

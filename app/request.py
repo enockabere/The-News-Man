@@ -1,7 +1,10 @@
 import urllib.request
 import json
+
+from requests.exceptions import HTTPError
 from .models import NewsSource
 from .models import Articles
+from  requests import get
 
 
 #Fetch API key
@@ -58,15 +61,20 @@ def get_articles(category):
     Function that gets the json response to our url request
     '''
     get_articles_url = article_url.format(category,api_key)
-    with urllib.request.urlopen(get_articles_url) as url:
-        get_articles_data = url.read()
-        get_articles_response = json.loads(get_articles_data)
+    response = get(get_articles_url)
+    if response.status_code != 200:
+        raise HTTPError("Server did not respond")
+    python_ok_data = json.loads(response.text)
+    articles = python_ok_data.get('articles')
+    # with urllib.request.urlopen(get_articles_url) as url:
+    #     get_articles_data = url.read()
+    #     get_articles_response = json.loads(get_articles_data)
         
-        articles_results = None
-        if get_articles_response ['articles']:
-            articles_results_list = get_articles_response['articles']
-            articles_results = art_results (articles_results_list)
-    return articles_results
+    #     articles_results = None
+    #     if get_articles_response ['articles']:
+    #         articles_results_list = get_articles_response['articles']
+    #         articles_results = art_results (articles_results_list)
+    return articles
 def art_results(article_list):
         '''
         Function that processes the news articles result and transform them to a list of objects
@@ -76,6 +84,7 @@ def art_results(article_list):
             articles_result: a list of news articles objects
         '''
         articles_results = []
+        
         for article_item in article_list:
             author = article_item.get('author')
             title = article_item.get('title')
@@ -89,38 +98,5 @@ def art_results(article_list):
                 articles_object = Articles(author,title,description,url,urlToImage,publishedAt,content)
                 articles_results.append(articles_object)
         return articles_results
-def get_art(title):
-    get_art_details_url = article_url.format(title,api_key)
-    
-    with urllib.request.urlopen(get_art_details_url) as url:
-        art_details_data = url.read()
-        art_details_response = json.loads(art_details_data)
-        
-        art_object = None
-        
-        if art_details_response:
-            author = art_details_response.get('author')
-            title = art_details_response.get('title')
-            description = art_details_response.get('description')
-            url = art_details_response.get('url')
-            urlToImage = art_details_response.get('urlToImage')
-            publishedAt = art_details_response.get('publishedAt')
-            content = art_details_response.get('content')
-            
-            art_object = Articles(author,title,description,url,urlToImage,publishedAt,content)
-    return art_object
-def search_article(article_name):
-    search_article_url = 'https://newsapi.org/v2/everything?q={}&sortBy=popularity&apiKey={}'.format(article_name,api_key)
-    with urllib.request.urlopen(search_article_url) as url:
-        search_article_data = url.read()
-        search_article_response = json.loads(search_article_data)
-        
-        search_article_results = None
-        
-        if search_article_response ['articles']:
-            search_article_list = search_article_response['articles']
-            search_article_results = art_results(search_article_list)
-    return search_article_results
-
-    
+ 
         

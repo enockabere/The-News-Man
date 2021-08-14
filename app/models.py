@@ -14,7 +14,14 @@ class NewsSource:
 class Articles:
     '''
     class that defines articles objects
-    '''
+    ''' 
+    author = ""
+    title = ""
+    description = ""
+    url = ""
+    urlToImage = ""
+    publishedAt = ""
+    content = ""
     def __init__(self,author,title,description,url,urlToImage,publishedAt,content):
         self.author = author
         self.title = title
