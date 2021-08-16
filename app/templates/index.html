@@ -4,7 +4,7 @@
 <section class="article" id="article">
   <div class="container">
     <div class="row" id="wraps">
-      {% for articles in clean_data %}
+      {% for articles in article %}
       <div class="col-md-6" id="area">
         <div class="card card-nav-tabs" id="shows">
           <div class="card-header card-header-primary">
@@ -18,9 +18,9 @@
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#messages" data-toggle="tab">
+                    <a class="nav-link" href="#{{articles.author}}" data-toggle="tab">
                       <i class="material-icons">description</i>
-                      More...
+                      More... 
                     </a>
                   </li>
                   <li class="nav-item">
@@ -51,7 +51,7 @@
                       {{articles.title}}</small></p>
                 </div>
               </div>
-              <div class="tab-pane" id="messages">
+              <div class="tab-pane" id="{{articles.author}}">
                 <h6>Article</h6>
                 {{articles.description}}
                 <hr>

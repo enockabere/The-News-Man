@@ -22,7 +22,8 @@ class Articles:
     urlToImage = ""
     publishedAt = ""
     content = ""
-    def __init__(self,author,title,description,url,urlToImage,publishedAt,content):
+    id=""
+    def __init__(self,author,title,description,url,urlToImage,publishedAt,content,id):
         self.author = author
         self.title = title
         self.description = description
@@ -30,3 +31,4 @@ class Articles:
         self.urlToImage = urlToImage
         self.publishedAt = publishedAt
         self.content = content
+        self.id = id

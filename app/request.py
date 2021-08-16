@@ -60,15 +60,12 @@ def get_articles(category):
     Function that gets the json response to our url request
     '''
     get_articles_url = article_url.format(category,api_key)
-    # response = get(get_articles_url)
-    # if response.status_code != 200:
-    #     raise HTTPError("Server did not respond")
-    # python_ok_data = json.loads(response.text)
-    # articles = python_ok_data.get('articles')
+    
+
     with urllib.request.urlopen(get_articles_url) as url:
         get_articles_data = url.read()
         get_articles_response = json.loads(get_articles_data)
-        
+        print(get_articles_response)
         articles_results = None
         if get_articles_response ['articles']:
             articles_results_list = get_articles_response['articles']
@@ -92,9 +89,9 @@ def art_results(article_list):
             urlToImage = article_item.get('urlToImage')
             publishedAt = article_item.get('publishedAt')
             content = article_item.get('content')
-            
+            id = article_item.get('id')
             if urlToImage:
-                articles_object = Articles(author,title,description,url,urlToImage,publishedAt,content)
+                articles_object = Articles(author,title,description,url,urlToImage,publishedAt,content,id)
                 articles_results.append(articles_object)
         return articles_results
  
