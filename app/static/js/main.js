@@ -17,7 +17,7 @@ $(document).ready(function () {
 
 $(function () {
   $("#typ").typed({
-    strings: ["We Got Good Shit!"],
+    strings: ["See The News, Feel The Shine!"],
     typeSpeed:200
   });
 });
